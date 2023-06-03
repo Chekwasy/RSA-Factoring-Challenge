@@ -16,7 +16,7 @@
  */
 int main(int argc, char *argv[])
 {
-  u_int64_t rd, file1, sec = 0, i = 0, siz = 1000, se = 1, num;
+  long long unsigned int rd, file1, sec = 0, i = 0, siz = 1000, se = 1, num;
   char st[1000], numstr[1000];
 
   if (argc == 2)
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	   {
 	     if ((num > 1) && ((num % se) == 0) && (se > 1))
 	       {
-		 printf("%ld=%ld*%ld\n", num, (num/se), se);
+		 printf("%llu=%llu*%llu\n", num, (num/se), se);
 		 se = 1;
 		 break;
 	       }
